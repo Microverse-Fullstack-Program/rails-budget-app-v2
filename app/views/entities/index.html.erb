@@ -14,12 +14,11 @@
       </div>
   <% else %>
       <div class="total-amount">
-        <p> Total: </p>
-        <p><%= @category.total_transactions%>$</p>
+        <p>Total: <%= @category.total_transactions%>$</p>
       </div>
       
       <% @entities.each do |entity| %>
-        <div class = "category" >
+        <div class = "transaction" >
           <p><%= entity.name %></p>
           <p>Price: <%= entity.amount %>$ </p>
         </div>

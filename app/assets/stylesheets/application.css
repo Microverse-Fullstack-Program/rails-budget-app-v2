@@ -141,7 +141,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 5%;
+  margin: 1rem 0.5rem;
+  padding-left: 0.5rem;
   gap: 10px;
 }
 
@@ -279,6 +280,7 @@ a {
 
 .category-details a {
   font-size: 1.65rem;
+  line-height: 2.5rem;
   color: #000;
   text-decoration: none;
   font-weight: bold;
@@ -300,7 +302,7 @@ a {
 
 .total-amount {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 100%;
   padding: 0.5rem;
   border-bottom: 2px solid #434b54;
@@ -309,8 +311,22 @@ a {
 .total-amount p {
   margin: 1rem 1.5rem 0 0;
   align-self: flex-end;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   font-weight: bold;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #434b54;
+}
+
+.transaction p {
+  font-size: 1.15rem;
+  font-weight: normal;
 }
 
 .no-record {
@@ -356,7 +372,7 @@ a {
   font-size: 100%;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   .container,
   .footer {
     width: 35vw !important;
@@ -364,6 +380,10 @@ a {
   }
 
   .category-details a {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
+  }
+
+  .category-details span {
+    font-size: 1.15rem;
   }
 }
