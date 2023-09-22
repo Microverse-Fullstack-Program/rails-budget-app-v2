@@ -9,24 +9,25 @@
         </a>
     </div>
 
-    <% if @entity.errors.any? %>
-        <div style="color: red; margin: 10px">
-            <h2 style="font-size: 15px; font-weight: bold">
-                <%= pluralize(@entity.errors.count, "error") %> 
-                prohibited this recipe from being saved:
-            </h2>
-
-            <ul>
-                <% @entity.errors.each do |error| %>
-                <li><%= error.full_message %></li>
-                <% end %>
-            </ul>
-        </div>
-    <% end %>
-
     <div class = "form-container">
-        <%= form.text_field :name, placeholder: " Name "%>
-        <%= form.text_field :amount, placeholder: " Price "%>
+        <div class="field">
+            <%= form.text_field :name, placeholder: "Name "%>
+            <% if @entity.errors.any? %>
+                <span class="alert">
+                    <%= @entity.errors[:name].first %>
+                </span>
+            <% end %>
+        </div>
+
+        <div class="field">
+            <%= form.text_field :amount, placeholder: "Price "%>
+            <% if @entity.errors.any? %>
+                <span class="alert">
+                    <%= @entity.errors[:amount].first %>
+                </span>
+            <% end %>
+        </div>
+
         <%= form.submit "Save", class: "submit-button" %>
     </div>
 <% end %>

@@ -15,11 +15,13 @@
     <div class="field">
       <%= f.password_field :password, autocomplete: "current-password",  placeholder: "Password" %>
     </div>
-<% end %>
-  
-<div class = "link-btns">
-  <%= render "devise/shared/links" %>
-</div>
+    <p class="alert"><%= alert %></p>
 
-<p class="alert"><%= alert %></p>
+    <div class = "link-btns">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
+<% end %>
+
+
   

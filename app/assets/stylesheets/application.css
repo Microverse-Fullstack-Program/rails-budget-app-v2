@@ -158,8 +158,12 @@ a {
 
 .form-container input {
   width: 98%;
-  padding: 0.5em 1em;
+  padding: 0.5em;
   margin-bottom: 10px;
+}
+
+.form-element {
+  margin-bottom: 15px;
 }
 
 .field_with_errors input[type="text"] {
@@ -195,7 +199,7 @@ a {
 .field input[type="password"],
 .field input[type="checkbox"] {
   width: 100%;
-  padding: 12px;
+  padding: 0.75em 0.5em;
   border: none;
   border-bottom: 2px solid #999;
   background-color: #fff;
@@ -205,10 +209,6 @@ a {
 .field input[type="email"]:focus,
 .field input[type="password"]:focus {
   border-bottom-color: #434b54;
-}
-
-.alert {
-  text-align: center;
 }
 
 #error_explanation h2 {
@@ -221,8 +221,8 @@ a {
 .error_msg,
 .alert {
   color: red;
-  font-size: 1rem;
-  margin-top: 5px;
+  font-size: 0.85rem;
+  margin-top: 0.15rem;
 }
 
 .nav-item {

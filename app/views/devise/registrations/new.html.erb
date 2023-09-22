@@ -5,23 +5,33 @@
     <%= f.submit "Next", class:"login-btn"%>
   </div>
 
-  <%= render "devise/shared/error_messages", resource: resource %>
-
   <div class ="signup_form">
     <div class="field">
       <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Full Name" %>
+      <% if resource.errors.has_key?(:name) %>
+        <span class="alert"><%= resource.errors[:name].first %></span>
+      <% end %>
     </div>
   
     <div class="field">
       <%= f.email_field :email, autocomplete: "email" , placeholder: "Email Address"%>
+      <% if resource.errors.has_key?(:email) %>
+        <span class="alert"><%= resource.errors[:email].first %></span>
+      <% end %>
     </div>
   
     <div class="field">
       <%= f.password_field :password, autocomplete: "new-password", placeholder: "New Password"%>
+      <% if resource.errors.has_key?(:password) %>
+        <span class="alert"><%= resource.errors[:password].first %></span>
+      <% end %>
     </div>
   
     <div class="field">
       <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: " Comfirm Password"%>
+      <% if resource.errors.has_key?(:password_confirmation) %>
+        <span class="alert"><%= resource.errors[:password_confirmation].first %></span>
+      <% end %>
     </div>
   </div>
 <% end %>

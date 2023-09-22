@@ -30,4 +30,43 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "Name cannot be blank"
+              too_short: "Name must be at least %{count} characters long"
+              too_long: "Name must be at most %{count} characters long"
+              taken: "Name already in use"
+            email:
+              blank: "Email cannot be blank"
+              taken: "Email already in use"
+            password:
+              blank: "Password cannot be blank"
+              too_short: "Password must be at least %{count} characters long"
+            password_confirmation:
+              blank: "Password confirmation cannot be blank"
+              confirmation: "Passwords do not match"
+        category:
+          attributes:
+            name:
+              blank: "Name cannot be blank"
+              too_short: "Name must be at least %{count} characters long"
+              too_long: "Name must be at most %{count} characters long"
+              taken: "Name already in use"
+            icon:
+              blank: "Icon cannot be blank"
+        entity:
+          attributes:
+            name:
+              blank: "Name cannot be blank"
+              too_short: "Name must be at least %{count} characters long"
+              too_long: "Name must be at most %{count} characters long"
+              taken: "Name already in use"
+            amount:
+              blank: "Amount cannot be blank"
+              not_a_number: "Amount must be a number"
+              greater_than: "Amount must be greater than %{count}"
+              less_than: "Amount must be less than %{count}"

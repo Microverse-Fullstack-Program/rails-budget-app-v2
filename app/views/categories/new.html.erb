@@ -9,24 +9,25 @@
 </div>
 
 <div class= "form-container">
-    <% if @category.errors.any? %>
-        <div style="color: red; margin: 10px">
-            <h2 style="font-size: 15px; font-weight: bold">
-                <%= pluralize(@category.errors.count, "error") %> 
-                prohibited this recipe from being saved:
-            </h2>
-
-            <ul>
-                <% @category.errors.each do |error| %>
-                <li><%= error.full_message %></li>
-                <% end %>
-            </ul>
-        </div>
-    <% end %>
-
     <%= form_with(model: @category, url: categories_path) do |form| %>
-        <%= form.text_field :name, placeholder: "Name" %>
-        <%= form.text_field :icon, placeholder: "Icon Link" %>
+        <div class = "form-element">
+            <%= form.text_field :name, placeholder: "Name" %>
+            <% if @category.errors.any? %>
+                <span class="alert">
+                    <%= @category.errors[:name].first %>
+                </span>
+            <% end %>
+        </div>
+
+        <div class = "form-element">
+            <%= form.text_field :icon, placeholder: "Icon Link" %>
+            <% if @category.errors.any? %>
+                <span class="alert">
+                    <%= @category.errors[:icon].first %>
+                </span>
+            <% end %>
+        </div>
+
         <%= form.submit "Save", class: "submit-button" %>
     <% end %>
 </div>
