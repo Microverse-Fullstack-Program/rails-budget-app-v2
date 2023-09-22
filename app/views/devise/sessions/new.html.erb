@@ -1,25 +1,25 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class = "app_header">
-      <a href ="<%= root_path %>">
+  <div class = "app_header">
+    <a href ="<%= root_path %>">
       <i class="fa-solid fa-arrow-left" id="left-arrow"></i>
-      </a>
-      <p> LOG IN</p>
-      <%= f.submit "Log In", class:"login-btn"%>
-    </div>
+    </a>
+    <p> LOG IN</p>
+    <%= f.submit "Log In", class:"login-btn"%>
+  </div>
   
+  <div class ="signin_form">
     <div class="field">
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email Address" %>
     </div>
-  
+    
     <div class="field">
       <%= f.password_field :password, autocomplete: "current-password",  placeholder: "Password" %>
     </div>
-  <% end %>
+<% end %>
   
-  <div class = "link-btns">
-     <%= render "devise/shared/links" %>
-  </div>
+<div class = "link-btns">
+  <%= render "devise/shared/links" %>
+</div>
 
-  <p class="alert"><%= alert %></p>
-  
+<p class="alert"><%= alert %></p>
   
