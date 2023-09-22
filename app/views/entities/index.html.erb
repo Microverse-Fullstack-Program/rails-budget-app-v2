@@ -1,0 +1,34 @@
+<div class = "app_header">
+  <a href= "<%= categories_path %>">
+    <i class="fa-solid fa-arrow-left" id = "left-arrow"></i>
+  </a>
+  <h2> Transactions</h2>
+  <a href = "/logout" id = "logout">Logout</a>
+</div>
+
+<div class="categories">
+  <% if @entities.nil? || @entities.empty?%>
+      <div class="no-record">
+        <p>No Transaction for this Category. </p>
+        <p>Please Add a Transaction</p>
+      </div>
+  <% else %>
+      <div class="total-amount">
+        <p> Total: </p>
+        <p><%= @category.total_transactions%>$</p>
+      </div>
+      
+      <% @entities.each do |entity| %>
+        <div class = "category" >
+          <p><%= entity.name %></p>
+          <p>Price: <%= entity.amount %>$ </p>
+        </div>
+      <% end %>
+  <% end %>
+</div>
+
+<div class ="footer">
+    <i class="fa-solid fa-plus"></i>
+    <%= link_to 'New Transaction', new_category_entity_path, class: "footer_link" %>
+</div>
+
