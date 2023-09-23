@@ -82,3 +82,5 @@ gem 'cancancan', '~> 3.5'
 gem 'factory_bot_rails', '~> 6.2'
 
 gem 'faker', '~> 3.2'
+
+gem "rails-controller-testing", "~> 1.0"
