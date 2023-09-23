@@ -4,9 +4,9 @@
 require 'rails_helper'
 
 RSpec.describe Entity, type: :model do
-  let (:user) { FactoryBot.build(:user) }
-  let (:category) { Category.new(name: 'Test Category', icon: 'fa fa-bolt', author: user) }
-  let (:entity) { Entity.new(name: 'Test Entity', amount: 453, category: category, author: user) }
+  let(:user) { FactoryBot.build(:user) }
+  let(:category) { Category.new(name: 'Test Category', icon: 'fa fa-bolt', author: user) }
+  let(:entity) { Entity.new(name: 'Test Entity', amount: 453, category:, author: user) }
 
   it 'is valid with valid attributes' do
     expect(entity).to be_valid
@@ -51,7 +51,7 @@ RSpec.describe Entity, type: :model do
   end
 
   it 'is not valid with an amount greater than 10**5' do
-    entity.amount = 10**5 + 1
+    entity.amount = (10**5) + 1
     expect(entity).to_not be_valid
   end
 

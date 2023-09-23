@@ -4,9 +4,8 @@
 require 'rails_helper'
 
 RSpec.describe Category, type: :model do
-  let (:user) { FactoryBot.build(:user) }
-  let (:category) { Category.new(name: 'Test Category', icon: 'fa fa-bolt', author: user) }
-
+  let(:user) { FactoryBot.build(:user) }
+  let(:category) { Category.new(name: 'Test Category', icon: 'fa fa-bolt', author: user) }
 
   it 'is valid with valid attributes' do
     expect(category).to be_valid
@@ -68,7 +67,7 @@ RSpec.describe Category, type: :model do
     expect(category).to be_valid
   end
 
-  
+
   describe 'Associations' do
     it 'should belong to author' do
       category = Category.reflect_on_association(:author)
