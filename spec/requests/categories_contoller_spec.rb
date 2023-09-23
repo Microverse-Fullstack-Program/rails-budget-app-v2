@@ -8,7 +8,7 @@ RSpec.describe 'Categories', type: :request do
 
   before do
     user = User.new(name: 'User-1', email: 'local@host', password: 'password', password_confirmation: 'password')
-    user.save 
+    user.save
     category = Category.new(name: 'Category-1x', icon: 'fa fa-bolt', author: user)
     category.save
     sign_in user

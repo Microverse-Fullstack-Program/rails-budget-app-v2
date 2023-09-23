@@ -8,15 +8,15 @@ RSpec.describe 'Entities', type: :request do
 
   before do
     user = User.new(name: 'User-1', email: 'local@host', password: 'password', password_confirmation: 'password')
-    user.save 
+    user.save
     category = Category.new(name: 'Category-1x', icon: 'fa fa-bolt', author: user)
     category.save
-    entity = Entity.new(name: 'Entity-1x', amount: 2345, author: user, category: category)
+    entity = Entity.new(name: 'Entity-1x', amount: 2345, author: user, category:)
     entity.save
     sign_in user
   end
 
-  describe 'GET categories/:category_id/entities' do 
+  describe 'GET categories/:category_id/entities' do
     before do
       get category_entities_path(Category.first)
     end
