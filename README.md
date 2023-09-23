@@ -108,8 +108,13 @@ rails server
 ### Test
 
 ```sh
-  rspec
+  rspec ./spec
 ```
+
+**Test Screenshot**
+
+![image](https://github.com/Microverse-Fullstack-Program/rails-budget-app-v2/assets/73167960/e09d3aaa-7b83-407e-9d45-24c6128625f7)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
