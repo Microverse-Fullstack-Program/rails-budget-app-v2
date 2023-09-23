@@ -123,24 +123,22 @@ rails server
 👤 **Chere Lemma**
 
 - GitHub: [Chere Lemma](https://github.com/cherelemma)
-- LinkedIn: [@chere-lemma27211613](https://www.linkedin.com/in/chere-lemma-urgaya)
-- Twitter: [@Chere21271613](https://twitter.com/Chere21271613)
+- LinkedIn: [@chere-lemma](https://www.linkedin.com/in/chere-lemma-urgaya)
+- Twitter: [@Chere](https://twitter.com/Chere21271613)
 
 
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [] Implement some UX improvements: like transitions and/or animations, etc.
-- [] Create a decent desktop design for the webapp.
-- [] Implement the left side menu to improve the navigability of the app.
+- [] Implement the left-side menu to improve the navigability of the app.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Microverse-Fullstack-Program/rails-budget-app/issues)
+Feel free to check the [issues page](https://github.com/Microverse-Fullstack-Program/rails-budget-app-v2/issues)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
