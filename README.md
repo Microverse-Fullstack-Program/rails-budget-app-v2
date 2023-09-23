@@ -108,8 +108,13 @@ rails server
 ### Test
 
 ```sh
-  rspec
+  rspec ./spec
 ```
+
+**Test Screenshot**
+
+![image](https://github.com/Microverse-Fullstack-Program/rails-budget-app-v2/assets/73167960/e09d3aaa-7b83-407e-9d45-24c6128625f7)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -118,24 +123,22 @@ rails server
 👤 **Chere Lemma**
 
 - GitHub: [Chere Lemma](https://github.com/cherelemma)
-- LinkedIn: [@chere-lemma27211613](https://www.linkedin.com/in/chere-lemma-urgaya)
-- Twitter: [@Chere21271613](https://twitter.com/Chere21271613)
+- LinkedIn: [@chere-lemma](https://www.linkedin.com/in/chere-lemma-urgaya)
+- Twitter: [@Chere](https://twitter.com/Chere21271613)
 
 
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [] Implement some UX improvements: like transitions and/or animations, etc.
-- [] Create a decent desktop design for the webapp.
-- [] Implement the left side menu to improve the navigability of the app.
+- [] Implement the left-side menu to improve the navigability of the app.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Microverse-Fullstack-Program/rails-budget-app/issues)
+Feel free to check the [issues page](https://github.com/Microverse-Fullstack-Program/rails-budget-app-v2/issues)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -156,6 +159,6 @@ design credits go to:
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE.md) licensed.
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
