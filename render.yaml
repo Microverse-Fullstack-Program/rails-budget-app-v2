@@ -6,7 +6,7 @@ databases:
 services:
   - type: web
     name: budgetapp
-    runtime: ruby
+    env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars: 
