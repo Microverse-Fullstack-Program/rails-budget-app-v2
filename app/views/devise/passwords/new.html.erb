@@ -1,0 +1,19 @@
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <div class = "app_header">
+    <a href ="<%= root_path %>">
+    <id= class="fa-solid fa-arrow-left" id="left-arrow"></i>
+    </a>
+    <p> Password Reset</p>
+    <%= f.submit "Send", class:"login-btn"%>
+  </div>
+  
+  <div class="forget-pass-title">
+    <p>Forgot your password?</p>
+  </div>
+
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email Address" %>
+  </div>
+<% end %>

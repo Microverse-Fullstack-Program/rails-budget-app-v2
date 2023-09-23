@@ -1,0 +1,23 @@
+<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+  <div class = "app_header">
+    <a href ="<%= root_path %>">
+    <id= class="fa-solid fa-arrow-left" id="left-arrow"></i>
+    </a>
+    <p> Password Reset</p>
+    <%= f.submit "Send", class:"login-btn"%>
+  </div>
+  
+  <div class="forget-pass-title">
+    <p>Resend confirmation instructions</p>
+  </div>
+
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email Address",  value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+  </div>
+<% end %>
+
+<div class = "link-btns">
+  <%= render "devise/shared/links" %>
+</div>

@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: lato, sans-serif;
+}
+
+p,
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+.container {
+  background-color: whitesmoke;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: #434b54;
+  font-size: 2.5rem;
+  margin: auto;
+  text-align: center;
+  font-family: 'Tangerine', serif;
+  font-weight: bold;
+}
+
+.auth-btns {
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  padding: 1em;
+}
+
+.auth-btns .signin {
+  background-color: #3778c2;
+  color: white;
+}
+
+.auth-btns .signup {
+  color: #434b54;
+}
+
+.auth-btns .signin,
+.auth-btns .signup {
+  padding: 1em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.signin:hover,
+.signup:hover {
+  background-color: #434b54;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.app_header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 1rem 0.5rem;
+  background-color: #3778c2;
+}
+
+.app_header p,
+.app_header h2 {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.app_header i {
+  font-size: 10.5em;
+  color: #000;
+}
+
+.forget-pass-title {
+  font-size: 1.2rem;
+  font-weight: normal;
+  width: 100%;
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.login-btn {
+  background-color: #3778c2;
+  border: none;
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+.signup_form,
+.signin_form {
+  background-color: whitesmoke;
+  height: 100vh;
+  padding: 10px 10px;
+  display: flex;
+  border-radius: 3px;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.link-btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.link-btns a {
+  color: #434b54;
+  text-decoration: none;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem 0.5rem;
+  padding-left: 0.5rem;
+  gap: 10px;
+}
+
+.form-container .submit-button {
+  width: 98%;
+  background-color: #434b54;
+  padding: 0.5em 1em;
+  color: white;
+  border: none;
+  font-size: 1.1em;
+  border-radius: 3px;
+}
+
+.form-container input {
+  width: 98%;
+  padding: 0.5em;
+  margin-bottom: 10px;
+}
+
+.form-element {
+  margin-bottom: 15px;
+}
+
+.field_with_errors input[type="text"] {
+  border: 1px solid red;
+}
+
+#left-arrow,
+#logout {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#left-arrow {
+  font-size: 1.75rem;
+}
+
+#logout {
+  font-size: 1.05rem;
+}
+
+.field {
+  margin-bottom: 2px;
+  color: #fff;
+}
+
+.navbar > button {
+  border: none;
+}
+
+.field input[type="email"],
+.field input[type="text"],
+.field input[type="password"],
+.field input[type="checkbox"] {
+  width: 100%;
+  padding: 0.75em 0.5em;
+  border: none;
+  border-bottom: 2px solid #999;
+  background-color: #fff;
+  color: #434b54;
+}
+
+.field input[type="email"]:focus,
+.field input[type="password"]:focus {
+  border-bottom-color: #434b54;
+}
+
+#error_explanation h2 {
+  color: red;
+  font-size: 1.15rem;
+  font-weight: bolder;
+  padding: 10px;
+}
+
+.error_msg,
+.alert {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 0.15rem;
+}
+
+.nav-item {
+  border-bottom: 1px solid #434b54;
+}
+
+.navbar-nav :last-child {
+  border-bottom: none !important;
+}
+
+.nav-link {
+  color: #fff !important;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+.navbar-brand {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  height: 100vh;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.category p {
+  color: #434b54;
+  font-size: 1.5em;
+  font-weight: normal;
+  padding: 0 !important;
+}
+
+.categories .category:last-child {
+  border-bottom: none;
+}
+
+.category-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.category-details a {
+  font-size: 1.65rem;
+  line-height: 2.5rem;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.category-details span {
+  font-size: 1.35rem;
+  font-weight: normal;
+}
+
+.category img {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.total-amount {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0.5rem;
+  border-bottom: 2px solid #434b54;
+}
+
+.total-amount p {
+  margin: 1rem 1.5rem 0 0;
+  align-self: flex-end;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #434b54;
+}
+
+.transaction p {
+  font-size: 1.15rem;
+  font-weight: normal;
+}
+
+.no-record {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: green;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #434b54;
+  color: white;
+  gap: 10px;
+  border: 1px solid white;
+  width: 100%;
+  margin-inline: auto;
+  padding: 1em 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.footer a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer i {
+  font-size: 1.3em;
+}
+
+.footer_link {
+  color: white;
+  font-size: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .container,
+  .footer {
+    width: 35vw !important;
+    margin: auto;
+  }
+
+  .category-details a {
+    font-size: 1.25rem;
+  }
+
+  .category-details span {
+    font-size: 1.15rem;
+  }
+}

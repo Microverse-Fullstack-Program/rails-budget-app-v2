@@ -1,0 +1,33 @@
+<%= form_with(model: @entity, url: category_entities_path) do |form| %>
+    <div class = "app_header">
+        <a href ="<%= category_entities_path %>">
+            <i class="fa-solid fa-arrow-left" id="left-arrow"></i>
+        </a>
+        <p> New Transaction </p>
+        <a href="/logout" id = "logout" >
+            Logout
+        </a>
+    </div>
+
+    <div class = "form-container">
+        <div class="field">
+            <%= form.text_field :name, placeholder: "Name "%>
+            <% if @entity.errors.any? %>
+                <span class="alert">
+                    <%= @entity.errors[:name].first %>
+                </span>
+            <% end %>
+        </div>
+
+        <div class="field">
+            <%= form.text_field :amount, placeholder: "Price "%>
+            <% if @entity.errors.any? %>
+                <span class="alert">
+                    <%= @entity.errors[:amount].first %>
+                </span>
+            <% end %>
+        </div>
+
+        <%= form.submit "Save", class: "submit-button" %>
+    </div>
+<% end %>

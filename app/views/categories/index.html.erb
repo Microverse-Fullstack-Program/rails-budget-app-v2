@@ -1,0 +1,40 @@
+<div class = "app_header">
+  <h2> CARTEGORIES </h2>
+  <a href = "/logout" id = "logout">Logout</a>
+</div>
+
+<div class="categories">
+    <% if @categories.nil? || @categories.empty? %>
+        <div class="no-record">
+            <p>No Record in the Database.</p>
+            <p> Please Add a Category</p>
+        </div>
+    <% else %>
+        <% @categories.each do |category| %>
+            <div class = "category">
+                <%= link_to category_entities_path(category.id) do %>
+                    <% def valid_image_url?(url) %>
+                        <% url.present? && url =~ /\Ahttps?:\/\/\S+\z/ %>
+                    <% end %>
+
+                    <% if valid_image_url?(category.icon) %>
+                        <%= image_tag category.icon, alt: 'Category image' %>
+                    <% else %>
+                        <%= image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJcT7PQqrhP-fcTi2K3UTvx1CZMmLvFPvupUZivUCJMFDRsX4LxhTRuenl5VHpbhs7elI&usqp=CAU', alt: 'My Image' %>
+                    <% end %>
+                <% end %>
+        
+                <div class="category-details">
+                    <%= link_to category.name.capitalize, category_entities_path(category.id) %>
+                    <span> Total: <%= category.total_transactions%>$ </span>
+                </div>
+            </div>
+        <% end %>
+    <% end %>
+</div>
+<div class ="footer">
+    <i class="fa-solid fa-plus"></i>
+    <%= link_to 'Add Category', new_category_path, class: "footer_link" %>
+</div>
+
+
